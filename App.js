@@ -77,15 +77,18 @@ const App = () => {
     },[],
   )*/
 
-  const [inputValue, setInputValue] = useState("")
+  const [inputValue, setInputValue] = useState('')
 
   const checkValueIsNumberOrNot = () =>{
-    if(isNaN(inputValue)){
-      alert("it's not a number")
-    }else{
-      alert("it's a number")
+    if(isNaN(inputValue))
+    {
+      alert("It is not a Number");
     }
-  }
+    else
+    {
+      alert("It is a Number")
+    }
+  };
 
   return (
     /*<View style = {{alignItems:"center", justifyContent:"center", flex:1}}>
@@ -123,10 +126,10 @@ const App = () => {
 
     <SafeAreaView style = {{flex:1}}>
       <View style = {styles.container}>
-        <TextInput
-          placeholder = "Enter Text"
+      <TextInput 
+          placeholder = 'Enter Text'
           style = {styles.textInputStyle}
-          onCheangeText = {(inputValue)=>{setInputValue(inputValue)}}
+          onChangeText = {(inputValue) => {setInputValue(inputValue)}}
         />
         <Button
           title = "Check Value is number or not"
@@ -135,6 +138,21 @@ const App = () => {
         />
       </View>
     </SafeAreaView>
+
+    /*<SafeAreaView style={{flex:1}}>
+      <View style = {styles.container}>
+        <TextInput 
+          placeholder = 'Enter Text'
+          style = {styles.textInputStyle}
+          onChangeText = {(inputValue) => {setInputValue(inputValue)}}
+        />
+        <Button
+          title = "Check Value Is Number or Not"
+          color = "#606070"
+          onPress = {checkValueIsNumberOrNot}
+        />
+      </View>
+    </SafeAreaView>*/
   );
 }
 
